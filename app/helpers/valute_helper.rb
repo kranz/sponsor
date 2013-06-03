@@ -1,0 +1,2 @@
+module ValuteHelper
+end

@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Nome:</b>
+  <%= @banca.nome %>
+</p>
+
+<p>
+  <b>Abi:</b>
+  <%= @banca.abi %>
+</p>
+
+
+<%= link_to 'Edit', edit_banca_path(@banca) %> |
+<%= link_to 'Back', banche_path %>

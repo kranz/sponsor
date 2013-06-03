@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 gem 'rails', '3.2.13'
 gem 'activerecord-jdbcsqlite3-adapter'
+gem 'activerecord-jdbcmysql-adapter'
 gem 'jruby-openssl'
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
@@ -16,7 +17,7 @@ gem "cucumber-rails", ">= 1.3.1", :group => :test, :require => false
 gem "launchy", ">= 2.2.0", :group => :test
 gem "capybara", ">= 2.0.3", :group => :test
 gem "factory_girl_rails", ">= 4.2.0", :group => [:development, :test]
-gem "bootstrap-sass", ">= 2.3.0.0"
+gem "bootstrap-sass", "~> 2.3.1.2"
 gem "devise", ">= 2.2.3"
 gem "cancan", ">= 1.6.9"
 gem "rolify", ">= 3.2.0"
@@ -28,3 +29,4 @@ gem "binding_of_caller", ">= 0.7.1", :group => :development, :platforms => [:mri
 gem "libv8", ">= 3.11.8"
 gem "therubyracer", ">= 0.11.3", :group => :assets, :platform => :ruby, :require => "v8"
 gem "hub", ">= 1.10.2", :require => nil, :group => [:development]
+gem 'will_paginate', '~> 3.0'

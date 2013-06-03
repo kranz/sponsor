@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Codice:</b>
+  <%= @contributo.codice %>
+</p>
+
+<p>
+  <b>Datarichiesta:</b>
+  <%= @contributo.datarichiesta %>
+</p>
+
+<p>
+  <b>Oggetto:</b>
+  <%= @contributo.oggetto %>
+</p>
+
+<p>
+  <b>Tipo contributo:</b>
+  <%= @contributo.tipo_contributo_id %>
+</p>
+
+<p>
+  <b>Filiale:</b>
+  <%= @contributo.filiale_id %>
+</p>
+
+<p>
+  <b>Richiedente:</b>
+  <%= @contributo.richiedente_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_contributo_path(@contributo) %> |
+<%= link_to 'Back', contributi_path %>

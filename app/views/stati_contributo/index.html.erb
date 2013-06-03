@@ -1,0 +1,21 @@
+<h1>Elenco Stati Contributo</h1>
+
+<table class="table table-striped">
+  <tr>
+    <th>Nome</th>
+    <th></th>
+  </tr>
+
+<% @stati_contributo.each do |stato_contributo| %>
+  <tr>
+    <td><%= link_to stato_contributo.nome, stato_contributo %></td>
+    <td><%= link_to 'Modifica', edit_stato_contributo_path(stato_contributo), :class => "btn" %>
+      <%= link_to 'Elimina', stato_contributo, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-danger" %>
+    </td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Stato contributo', new_stato_contributo_path, :class => "btn btn-primary" %>

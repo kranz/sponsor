@@ -1,0 +1,16 @@
+<%= simple_form_for(@documento) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :numerofattura %>
+    <%= f.input :datafattura %>
+    <%= f.input :importo %>
+    <%= f.input :tipo_documento_id %>
+    <%= f.input :valuta_id %>
+    <%= f.input :contributo_id %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

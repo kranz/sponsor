@@ -1,0 +1,2 @@
+module StatiContributoHelper
+end

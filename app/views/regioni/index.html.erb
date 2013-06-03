@@ -1,0 +1,23 @@
+<h1>Listing regioni</h1>
+
+<table class="table table-striped">
+  <tr>
+    <th></th>
+    <th>Nome</th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @regioni.each do |regione| %>
+  <tr>
+    <td><%= regione.id %></td>
+    <td><%= link_to regione.nome, regione %></td>
+    <td><%= link_to 'Modifica', edit_regione_path(regione), :class => "btn" %>
+      <%= link_to 'Elimina', regione, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-danger" %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Regione', new_regione_path %>

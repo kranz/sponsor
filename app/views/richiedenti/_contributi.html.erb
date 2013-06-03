@@ -1,0 +1,19 @@
+<% richiedente.contributi.order("datarichiesta DESC").each do |contrib| %>
+  <div class="hero-unit">
+    <div class="contributo">
+      <div class="cont-tipo">
+      	<%= contrib.datarichiesta? ? contrib.datarichiesta.year : "" %> - <%= contrib.tipo_contributo.descrizione %>
+      </div>
+      <div class="cont-importo">
+        <%= contrib.stato_contributo ? contrib.stato_contributo.nome : "" %> - 
+      	<%= number_to_currency(contrib.importoerogato, :unit => '&euro;') %>
+      </div>
+      <div class="cont-oggetto">
+      	<%= contrib.oggetto %>
+      </div>    
+      <div class="cont-link">
+      	<%= link_to 'modifica', edit_richiedente_contributo_url(richiedente, contrib) %>
+      </div>    
+    </div>
+  </div>
+<% end %>

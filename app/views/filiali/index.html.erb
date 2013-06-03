@@ -1,0 +1,31 @@
+<h1>Listing filiali</h1>
+
+<table>
+  <tr>
+    <th>Nome</th>
+    <th>Codice</th>
+    <th>Cab</th>
+    <th>Banca</th>
+    <th>Area territoriale</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @filiali.each do |filiale| %>
+  <tr>
+    <td><%= filiale.nome %></td>
+    <td><%= filiale.codice %></td>
+    <td><%= filiale.cab %></td>
+    <td><%= filiale.banca.nome %></td>
+    <td><%= filiale.area_territoriale.nome %></td>
+    <td><%= link_to 'Show', filiale %></td>
+    <td><%= link_to 'Edit', edit_filiale_path(filiale) %></td>
+    <td><%= link_to 'Destroy', filiale, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Filiale', new_filiale_path %>

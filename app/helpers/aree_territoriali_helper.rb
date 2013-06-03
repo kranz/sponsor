@@ -1,0 +1,2 @@
+module AreeTerritorialiHelper
+end

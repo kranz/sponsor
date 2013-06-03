@@ -1,0 +1,23 @@
+<h1>Listing tipi_evento</h1>
+
+<table>
+  <tr>
+    <th>Descrizione</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @tipi_evento.each do |tipo_evento| %>
+  <tr>
+    <td><%= tipo_evento.descrizione %></td>
+    <td><%= link_to 'Show', tipo_evento %></td>
+    <td><%= link_to 'Edit', edit_tipo_evento_path(tipo_evento) %></td>
+    <td><%= link_to 'Destroy', tipo_evento, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Tipo evento', new_tipo_evento_path %>

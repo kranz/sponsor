@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Numeroconto:</b>
+  <%= @posizione.numeroconto %>
+</p>
+
+<p>
+  <b>Iban:</b>
+  <%= @posizione.iban %>
+</p>
+
+<p>
+  <b>Richiedente:</b>
+  <%= @posizione.richiedente_id %>
+</p>
+
+<p>
+  <b>Banca:</b>
+  <%= @posizione.banca_id %>
+</p>
+
+<p>
+  <b>Filiale id:</b>
+  <%= @posizione.filiale_id_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_posizione_path(@posizione) %> |
+<%= link_to 'Back', posizioni_path %>

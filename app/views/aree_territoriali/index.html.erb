@@ -1,0 +1,27 @@
+<h1>Listing aree_territoriali</h1>
+
+<table>
+  <tr>
+    <th>Nome</th>
+    <th>Codice</th>
+    <th>Banca</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @aree_territoriali.each do |area_territoriale| %>
+  <tr>
+    <td><%= area_territoriale.nome %></td>
+    <td><%= area_territoriale.codice %></td>
+    <td><%= area_territoriale.banca.nome %></td>
+    <td><%= link_to 'Show', area_territoriale %></td>
+    <td><%= link_to 'Edit', edit_area_territoriale_path(area_territoriale) %></td>
+    <td><%= link_to 'Destroy', area_territoriale, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Area territoriale', new_area_territoriale_path %>

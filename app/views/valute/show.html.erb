@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Sigla:</b>
+  <%= @valuta.sigla %>
+</p>
+
+<p>
+  <b>Nome:</b>
+  <%= @valuta.nome %>
+</p>
+
+
+<%= link_to 'Modifica', edit_valuta_path(@valuta) %> |
+<%= link_to 'Indietro', valute_path %>

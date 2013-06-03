@@ -1,0 +1,2 @@
+module TipiContributoHelper
+end

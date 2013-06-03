@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Nome:</b>
+  <%= @azione.nome %>
+</p>
+
+<p>
+  <b>Contributo:</b>
+  <%= @azione.contributo_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_azione_path(@azione) %> |
+<%= link_to 'Back', azioni_path %>

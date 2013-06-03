@@ -1,0 +1,22 @@
+<%= simple_form_for(@evento) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :localita %>
+    <%= f.input :datainizio %>
+    <%= f.input :datafine %>
+    <%= f.input :orario %>
+    <%= f.input :striscione %>
+    <%= f.input :dataconsprevista %>
+    <%= f.input :dataconseffettiva %>
+    <%= f.input :datarestituzione %>
+    <%= f.input :numstriscione %>
+    <%= f.input :durata %>
+    <%= f.input :tipo_evento_id %>
+    <%= f.input :contributo_id %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

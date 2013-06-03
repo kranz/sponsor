@@ -1,0 +1,55 @@
+<%= form_for(@richiedente ) do |f| %>
+
+<div class="control-group">
+  <div class="controls">
+    <%= f.text_field :ragionesociale, :class => "span8", 
+                     :placeholder => "Ragione Sociale" %>
+  </div>
+  <div class="controls controls-row">
+    <%= f.text_field :indirizzo, :class => "span8", 
+                     :placeholder => "Indirizzo" %>
+  </div>
+  <div class="controls controls-row">
+    <%= f.text_field :cap, :class => "span1", 
+                     :placeholder => "CAP" %>
+    <%= f.text_field :citta, :class => "span6", 
+                     :placeholder => "Città" %>
+    <%= collection_select(:richiedente, :provincia_id, Provincia.order("sigla ASC").all, :id, :sigla, {} , :class => "span1") %>
+  </div>
+</div>
+<div class="form-inputs">
+  <div class="input-prepend span8">
+    <span class="fixed-add add-on">Cod 029</span>
+    <%=  f.text_field :cod029, :class => "input-xxlarge" %>
+  </div>
+  <div class="input-prepend span8">
+    <span class="fixed-add add-on">CANA</span>
+    <%=  f.text_field :cana, :class => "input-xxlarge" %>
+  </div>
+  <div class="input-prepend span8">
+    <span class="fixed-add add-on">P. IVA</span>
+    <%=  f.text_field :piva, :class => "input-xxlarge" %>
+  </div>
+  <div class="input-prepend span8">
+    <span class="fixed-add add-on">Cod. fiscale</span>
+    <%=  f.text_field :codfiscale, :class => "input-xxlarge"  %>
+  </div>
+  <div class="input-prepend span8">
+    <span class="fixed-add add-on">Tel</span>
+    <%=  f.text_field :telefono, :class => "input-xxlarge" %>
+  </div>
+  <div class="input-prepend span8">
+    <span class="fixed-add add-on">Fax</span>
+    <%=  f.text_field :fax, :class => "input-xxlarge" %>
+  </div>
+  <div class="input-prepend span8">
+    <span class="fixed-add add-on">email</span>
+    <%=  f.text_field :email, :class => "input-xxlarge" %>
+  </div>
+  <div class="input-prepend span8">
+    <span class="fixed-add add-on">Note</span>
+    <%=  f.text_area :note, :rows => 3, :class => "input-xxlarge" %>
+  </div>
+</div>
+<%= f.submit  %>
+<% end %>

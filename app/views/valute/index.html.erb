@@ -1,0 +1,24 @@
+<h1>Elenco valute</h1>
+
+<table class="table table-bordered">
+  <tr>
+    <th>Sigla</th>
+    <th>Nome</th>
+    <th></th>
+  </tr>
+
+<% @valute.each do |valuta| %>
+  <tr>
+    <td><%= link_to valuta.sigla, valuta %></td>
+    <td><%= valuta.nome %></td>
+    <td>
+      <%= link_to 'Modifica', edit_valuta_path(valuta), :class => "btn" %>
+      <%= link_to 'Elimina', valuta, method: :delete, data: { confirm: 'Sei sicuro?' }, :class => "btn btn-danger" %>
+    </td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Crea Valuta', new_valuta_path, :class => "btn btn-primary" %>

@@ -1,0 +1,33 @@
+<h1>Listing contributi</h1>
+
+<table>
+  <tr>
+    <th>Codice</th>
+    <th>Datarichiesta</th>
+    <th>Oggetto</th>
+    <th>Tipo contributo</th>
+    <th>Filiale</th>
+    <th>Richiedente</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @contributi.each do |contributo| %>
+  <tr>
+    <td><%= contributo.codice %></td>
+    <td><%= contributo.datarichiesta %></td>
+    <td><%= contributo.oggetto %></td>
+    <td><%= contributo.tipo_contributo_id %></td>
+    <td><%= contributo.filiale_id %></td>
+    <td><%= contributo.richiedente_id %></td>
+    <td><%= link_to 'Show', contributo %></td>
+    <td><%= link_to 'Edit', edit_contributo_path(contributo) %></td>
+    <td><%= link_to 'Destroy', contributo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Contributo', new_contributo_path %>

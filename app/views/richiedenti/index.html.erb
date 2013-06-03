@@ -1,0 +1,32 @@
+<%= form_tag richiedenti_path, :method => 'get' do %>
+  <p>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Cerca", :name => nil %>
+  </p>
+<% end %>
+
+<h1>Elenco richiedenti</h1>
+
+<%= will_paginate @richiedenti %>
+<table class="table table-striped">
+  <tr>
+    <th style="width: 10%">Codice 029</th>
+    <th style="width: 70%">Ragione Sociale</th>
+    <th style="width: 20%"></th>
+  </tr>
+
+<% @richiedenti.each do |richiedente| %>
+  <tr>
+    <td><%= richiedente.cod029 %></td>
+    <td><%= link_to richiedente.ragionesociale, richiedente %></td>
+    <td>
+      <%= link_to 'Modifica', edit_richiedente_path(richiedente), :class => "btn" %>
+      <%= link_to 'Elimina', richiedente, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-danger" %>
+    </td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Crea Richiedente', new_richiedente_path, :class => "btn btn-primary" %>

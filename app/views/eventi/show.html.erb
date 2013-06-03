@@ -1,0 +1,65 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Localita:</b>
+  <%= @evento.localita %>
+</p>
+
+<p>
+  <b>Datainizio:</b>
+  <%= @evento.datainizio %>
+</p>
+
+<p>
+  <b>Datafine:</b>
+  <%= @evento.datafine %>
+</p>
+
+<p>
+  <b>Orario:</b>
+  <%= @evento.orario %>
+</p>
+
+<p>
+  <b>Striscione:</b>
+  <%= @evento.striscione %>
+</p>
+
+<p>
+  <b>Dataconsprevista:</b>
+  <%= @evento.dataconsprevista %>
+</p>
+
+<p>
+  <b>Dataconseffettiva:</b>
+  <%= @evento.dataconseffettiva %>
+</p>
+
+<p>
+  <b>Datarestituzione:</b>
+  <%= @evento.datarestituzione %>
+</p>
+
+<p>
+  <b>Numstriscione:</b>
+  <%= @evento.numstriscione %>
+</p>
+
+<p>
+  <b>Durata:</b>
+  <%= @evento.durata %>
+</p>
+
+<p>
+  <b>Tipo evento:</b>
+  <%= @evento.tipo_evento_id %>
+</p>
+
+<p>
+  <b>Contributo:</b>
+  <%= @evento.contributo_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_evento_path(@evento) %> |
+<%= link_to 'Back', eventi_path %>

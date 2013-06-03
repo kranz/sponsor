@@ -1,0 +1,31 @@
+<h1>Listing posizioni</h1>
+
+<table>
+  <tr>
+    <th>Numeroconto</th>
+    <th>Iban</th>
+    <th>Richiedente</th>
+    <th>Banca</th>
+    <th>Filiale id</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @posizioni.each do |posizione| %>
+  <tr>
+    <td><%= posizione.numeroconto %></td>
+    <td><%= posizione.iban %></td>
+    <td><%= posizione.richiedente_id %></td>
+    <td><%= posizione.banca_id %></td>
+    <td><%= posizione.filiale_id_id %></td>
+    <td><%= link_to 'Show', posizione %></td>
+    <td><%= link_to 'Edit', edit_posizione_path(posizione) %></td>
+    <td><%= link_to 'Destroy', posizione, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Posizione', new_posizione_path %>

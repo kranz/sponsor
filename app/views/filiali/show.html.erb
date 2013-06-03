@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Nome:</b>
+  <%= @filiale.nome %>
+</p>
+
+<p>
+  <b>Codice:</b>
+  <%= @filiale.codice %>
+</p>
+
+<p>
+  <b>Cab:</b>
+  <%= @filiale.cab %>
+</p>
+
+<p>
+  <b>Banca:</b>
+  <%= @filiale.banca_id %>
+</p>
+
+<p>
+  <b>Area territoriale:</b>
+  <%= @filiale.area_territoriale_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_filiale_path(@filiale) %> |
+<%= link_to 'Back', filiali_path %>

@@ -1,0 +1,41 @@
+<div class="span5">
+<address>
+  <h3><%= @richiedente.cod029.to_s %><br /><%= @richiedente.ragionesociale %></h3>
+  <%= @richiedente.indirizzo %><br />
+  <%= @richiedente.cap %> <%= @richiedente.citta %> <%= @richiedente.provincia.sigla %><br /><br />
+  <%= @richiedente.telefono? ? content_tag(:abbr, "T:", :title => "Telefono") : "" %> <%= @richiedente.telefono %><br />
+  <%= @richiedente.fax? ? content_tag(:abbr, "F:", :title => "Fax") : ""%> <%= @richiedente.fax %><br />
+  <%= @richiedente.email? ? content_tag(:abbr, "E:", :title => "Email") : ""%> <%= @richiedente.email %>
+</address>
+
+<table>
+  <tr>
+    <td><b>CANA</b></td>
+    <td><%= @richiedente.cana %></td>
+  </tr>
+  <tr>
+    <td><b>Partita IVA</b></td>
+    <td><%= @richiedente.piva %></td>
+  </tr>
+  <tr>
+    <td><b>Codice Fiscale</b></td>
+    <td><%= @richiedente.codfiscale %></td>
+  </tr>
+  <tr>
+    <td>Note</td>
+    <td><%= @richiedente.note %></td>
+  </tr>
+</table>
+
+<%= link_to 'Edit', edit_richiedente_path(@richiedente) %> |
+<%= link_to 'Back', richiedenti_path %>
+</div>
+<div class="span4">
+  <h3>Contributi</h3>
+  <%= render :partial => 'contributi', :locals => {:richiedente => @richiedente} %>
+  <%= link_to 'Nuovo contributo', new_richiedente_contributo_path(@richiedente), :class => "btn btn-primary pull-right" %>
+</div>
+<div class="span2">
+    <h3>Posizioni</h3>
+    <%= link_to 'Nuova posizione', new_richiedente_posizione_path(@richiedente), :class => "btn btn-primary pull-right" %>
+</div>

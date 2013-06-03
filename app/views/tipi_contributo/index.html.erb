@@ -1,0 +1,21 @@
+<h1>Elenco Tipi Contributo</h1>
+
+<table class="table table-striped table-condensed">
+  <tr>
+    <th>Descrizione</th>
+    <th></th>
+  </tr>
+
+<% @tipi_contributo.each do |tipo_contributo| %>
+  <tr>
+    <td><%= link_to tipo_contributo.descrizione, tipo_contributo %></td>
+    <td>
+      <%= link_to 'Modifica', edit_tipo_contributo_path(tipo_contributo), :class => "btn" %>
+      <%= link_to 'Elimina', tipo_contributo, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-danger" %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Crea Tipo contributo', new_tipo_contributo_path, :class => "btn btn-primary" %>

@@ -1,0 +1,2 @@
+module RichiedentiHelper
+end

@@ -1,0 +1,20 @@
+<h1>Elenco Tipi Documento</h1>
+
+<table>
+  <tr>
+    <th>Descrizione</th>
+    <th></th>
+  </tr>
+
+<% @tipi_documento.each do |tipo_documento| %>
+  <tr>
+    <td><%= link_to tipo_documento.descrizione, tipo_documento %></td>
+    <td>
+      <%= link_to 'Modifica', edit_tipo_documento_path(tipo_documento), :class => "btn" %>
+      <%= link_to 'Elimina', tipo_documento, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-danger" %></td>
+  </tr>
+<% end %>
+</table>
+
+<%= link_to 'Crea Tipo documento', new_tipo_documento_path %>
+

@@ -1,0 +1,33 @@
+<h1>Listing documenti</h1>
+
+<table>
+  <tr>
+    <th>Numerofattura</th>
+    <th>Datafattura</th>
+    <th>Importo</th>
+    <th>Tipo documento</th>
+    <th>Valuta</th>
+    <th>Contributo</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @documenti.each do |documento| %>
+  <tr>
+    <td><%= documento.numerofattura %></td>
+    <td><%= documento.datafattura %></td>
+    <td><%= documento.importo %></td>
+    <td><%= documento.tipo_documento_id %></td>
+    <td><%= documento.valuta_id %></td>
+    <td><%= documento.contributo_id %></td>
+    <td><%= link_to 'Show', documento %></td>
+    <td><%= link_to 'Edit', edit_documento_path(documento) %></td>
+    <td><%= link_to 'Destroy', documento, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Documento', new_documento_path %>

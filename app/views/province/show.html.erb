@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Nome:</b>
+  <%= @provincia.nome %>
+</p>
+
+<p>
+  <b>Sigla:</b>
+  <%= @provincia.sigla %>
+</p>
+
+<p>
+  <b>Regione:</b>
+  <%= @provincia.regione.nome %>
+</p>
+
+
+<%= link_to 'Edit', edit_provincia_path(@provincia) %> |
+<%= link_to 'Back', province_path %>

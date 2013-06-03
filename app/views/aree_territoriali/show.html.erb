@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Nome:</b>
+  <%= @area_territoriale.nome %>
+</p>
+
+<p>
+  <b>Codice:</b>
+  <%= @area_territoriale.codice %>
+</p>
+
+<p>
+  <b>Provincia:</b>
+  <%= @area_territoriale.provincia_id %>
+</p>
+
+<p>
+  <b>Banca:</b>
+  <%= @area_territoriale.banca_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_area_territoriale_path(@area_territoriale) %> |
+<%= link_to 'Back', aree_territoriali_path %>

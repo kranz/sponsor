@@ -1,0 +1,31 @@
+<%= form_for([@richiedente, @contributo]) do |f| %>
+  <div class="form-inputs">
+    <%= f.label(:codice) %>
+    <%= f.text_field :codice %><br />
+    <%= f.label(:datarichiesta) %>
+    <%= f.text_field :datarichiesta %><br />
+    <%= f.label(:oggetto) %>
+    <%= f.text_area :oggetto %><br />
+    <%= f.label(:importorichiesto) %>
+    <%= f.text_field :importorichiesto %><br />
+    <%= f.label(:segnalante) %>
+    <%= f.text_field :segnalante %><br />
+    <%= f.label(:dataerogazione) %>
+    <%= f.text_field :dataerogazione %><br />
+    <%= f.label(:importoerogato) %>
+    <%= f.text_field :importoerogato %><br />
+    <%= f.label(:aliquotaiva) %>
+    <%= f.text_field :aliquotaiva %><br />
+    <%= f.label(:ritornoprevisto) %>
+    <%= f.text_area :ritornoprevisto %><br />
+    <%= f.label(:ritornoeffettivo) %>
+    <%= f.text_area :ritornoeffettivo %><br />
+    <%= f.collection_select(:stato_contributo_id, StatoContributo.all, :id, :nome) %>
+    <%= f.collection_select(:tipo_contributo_id, TipoContributo.all, :id, :descrizione) %>
+    <%= f.collection_select(:filiale_id, Filiale.all, :id, :nome) %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.submit %>
+  </div>
+<% end %>

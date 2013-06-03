@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Numerofattura:</b>
+  <%= @documento.numerofattura %>
+</p>
+
+<p>
+  <b>Datafattura:</b>
+  <%= @documento.datafattura %>
+</p>
+
+<p>
+  <b>Importo:</b>
+  <%= @documento.importo %>
+</p>
+
+<p>
+  <b>Tipo documento:</b>
+  <%= @documento.tipo_documento_id %>
+</p>
+
+<p>
+  <b>Valuta:</b>
+  <%= @documento.valuta_id %>
+</p>
+
+<p>
+  <b>Contributo:</b>
+  <%= @documento.contributo_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_documento_path(@documento) %> |
+<%= link_to 'Back', documenti_path %>
